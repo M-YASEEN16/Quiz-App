@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <!-- <section class="WelcomeSection">
-    <h1>Welcome To My Quiz App</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="FormSection">
+      <div class="formDiv">
+      <h2>Student Details</h2>
+      <p>Please enter your details to start the quiz</p>
+      <form action="javascript:void(0)">
+        
+          <input type="text" id="name" placeholder="Full-Name" />
+        
+
+        
+          <input type="email" id="email" placeholder="Email" />
+        
+
+        
+          <input type="number" id="rollNum" placeholder="Roll-Number" />
+        
+
+        
+          <input type="text" id="institudeName" placeholder="Institute Name" />
+
+        <div class="formBtn">
+
+          <button onclick="startQuiz()">Submit</button>
+        </div>
+      </form>
+      </div>
+    </section>
+   <section class="WelcomeSection">
+    <h1>👋&nbsp;Hey <span id="givenName"></span></h1>
+    <h1>Wellcome To the Quiz!</h1>
     <div class="importantAnnouncement">
       <h2><i class="fa-solid fa-triangle-exclamation"></i> Important Information</h2>
       <ul>
@@ -44,7 +78,7 @@
           <td>80%</td>
           <td><button class="passedBtn">Passed</button></td>
           <td>--</td>
-          <td><button class="StartBtn">Start Quiz</button></td>
+          <td><button onclick="loadQuestion()" class="StartBtn">Start Quiz</button></td>
         </tr>
         <tr>
           <td>Modern Front-End Development</td>
@@ -55,7 +89,7 @@
           <td>80%</td>
           <td><button class="passedBtn">Passed</button></td>
           <td>--</td>
-          <td><button class="StartBtn">Start Quiz</button></td>
+          <td><button id="CssQuizBtn" class="StartBtn">Start Quiz</button></td>
         </tr>
         <tr>
           <td>Modern Front-End Development</td>
@@ -66,38 +100,39 @@
           <td>80%</td>
           <td><button class="passedBtn">Passed</button></td>
           <td>--</td>
-          <td><button class="StartBtn">Start Quiz</button></td>
+          <td><button id="JsQuizBtn" class="StartBtn">Start Quiz</button></td>
         </tr>
       </table>
     <div class="firstLastSec">  
       &copy;CopyRight 2025 By Muhammad Yaseen
     </div>
-  </section> -->
+  </section> 
   
-   <!-- <section class="ShowQuestion">
+
+   <section class="ShowQuestion">
 <div class="questionSec1">
   
-    <h3>Question <span class="questionCount">1</span> of <span class="totalQues">10</span> </h5>
-  <div class="timer"><i class="fa-solid fa-clock"></i> <span>04:53</span></div>
+    <h3>Question <span id="questionCount">1</span> of <span id="totalQues">10</span> </h5>
+  <div class="timer"><i class="fa-solid fa-clock"></i> <span></span></div>
   
 </div>
 <div class="progressBar"><span id="line"></span></div>
   </section>
   <section class="QuestionSection">
-<h2>What is the Dom</h2>
+<h2 id="QuizQuestion"></h2>
     <ul id="option">
-      <li>one</li>
-      <li>two</li>
-      <li>three</li>
-      <li>four</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
     <div class="nextBtnDiv">
 
-      <button>Next Question</button>
+      <button onclick="nextQuestion()" class="btnNextQuestion">Next Question</button>
     </div>
-  </section>  -->
+  </section>  
 
-  <section class="resultSection1">
+     <section class="resultSection1">
     <div class="acheievement">
       <div class="acheiveIcon"><i class="fa-solid fa-trophy"></i></div>
       <div class="acheivementPart2">
@@ -106,6 +141,10 @@
       </div>
     </div>
   </section>
+
+  
+
+
 
   <section class="resultShow">
     <div class="resultQuiz">
@@ -175,7 +214,8 @@
         <button class="Lastbtn2"><i class="fa-solid fa-gift"></i> Celebration Again</button>
       </div>
     </div>
-  </section>  
-</body>
-<script src="./app.js"></script>
+  </section>   
+  </body>
+  <script src="app.js"></script>
+  
 </html>

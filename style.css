@@ -22,22 +22,80 @@ p, label, .option {
 body{
   width: 100%;
   /* border: solid; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
   overflow: hidden;
 }
+.FormSection{
+  display: flex;
+height: 100%;
+
+  flex-direction: column;
+  border-radius: 8px;
+  justify-content: center;
+  /* border: solid; */
+  align-items: center;
+}
+.formDiv{
+  box-shadow: 1px 1px 10px #d0cdcd,
+            1px 1px 10px #d0cdcd;
+  padding: 20px;
+  /* border: solid; */
+}
+.FormSection h2{
+  font-size: 35px;
+}
+.FormSection P{
+  font-size: 18px;
+  color: grey;
+  margin: 5px 0;
+}
+form{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* border: solid; */
+}
+.formBtn{
+  text-align: end;
+}
+.formBtn button{
+  padding:5px 12px;
+  font-size: 15px;
+  border-radius: 7px;
+  background-color: #0af331;
+  border: none;
+  color: white;
+}
+form input{
+  width: 600px;
+  padding: 11px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid grey;
+}
+form input:focus{
+border: 1px solid #0af331 ;
+}
+
 .WelcomeSection{
-  
-  margin-top: 23px;
+  margin: 10px 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #d0cdcd,
+            -2px -2px 10px #d0cdcd; 
   /* border: solid; */
   display: flex;
   flex-direction: column;
 }
 .WelcomeSection h1{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding: 0 10px;
-  font-size: 50px;
-  font-family: 'Inter', sans-serif;
+  font-size: 40px;
+  font-family: 'poppins', sans-serif;
   font-weight: 500;
 }
 .importantAnnouncement{
@@ -72,7 +130,7 @@ table{
   box-shadow: 2px 2px 10px #d0cdcd,
             -2px -2px 10px #d0cdcd;
   font-size: 17px;
-  margin: 10px auto;
+  margin: 2px auto;
 
 }
 table td{
@@ -127,7 +185,8 @@ color: rgb(33, 31, 31);
 } 
 .firstLastSec{
   background-color: rgb(56, 55, 55);
-  margin-top: 55px;
+  margin-top: 40px;
+  
   border-radius: 2px ;
   text-align: center;
   color: rgb(177, 174, 174);
@@ -198,8 +257,24 @@ color: rgb(33, 31, 31);
   margin-top: 6px;
   margin: 10px 0px;
   padding: 10px 10px;
+  cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
+}
+#option li:hover{
+  background: #cbcac1;
+}
+.correctAns{
+  background: green !important;
+}
+ 
+.wrongAns {
+  background: red !important;
+}
+
+.disableli {
+  pointer-events: none;
+  opacity: 0.7;
 }
 
 .nextBtnDiv{
@@ -394,4 +469,17 @@ font-size: 20px;
   background-color: rgba(253, 240, 144, 0.76);
   color: rgb(255, 166, 0);
   font-weight: 600;
+}
+
+.FormSection{
+
+  display: none;
+}
+.WelcomeSection{
+}
+.ShowQuestion{
+display: none;
+}
+.resultSection1,.resultShow{
+display: none;
 }
